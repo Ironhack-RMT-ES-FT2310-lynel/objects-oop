@@ -220,3 +220,41 @@ console.log( person.saludar(  ) )
 console.log( person.currentSize() )
 
 console.log( person.desearFelizNoCumpleaños() )
+
+
+
+
+// CLASSES
+
+
+class Hero {
+
+  // propiedades
+  constructor(patata, identity, hp) {
+    this.name = patata;
+    this.identity = identity;
+    this.isEvil = false; // propiedad para todos. Valor por defecto.
+    this.hp = hp
+  }
+
+  // metodos
+  revelarSecreto() {
+    return `Mi identidad secreta es ${this.identity}`
+  }
+
+  volverseVillano() {
+    this.isEvil = true;
+    return `${this.name} ahora es un villano!`
+  }
+
+}
+
+let objeto1 = new Hero("Iron Man", "Tony Stark", 100)
+console.log(objeto1)
+console.log( objeto1.revelarSecreto() )
+console.log( objeto1.volverseVillano() )
+console.log(objeto1)
+
+let objeto2 = new Hero("Black Widow", "Natasha Romanoff", 120)
+console.log(objeto2)
+console.log( objeto2.revelarSecreto() )
