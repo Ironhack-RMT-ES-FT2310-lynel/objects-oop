@@ -258,3 +258,27 @@ console.log(objeto1)
 let objeto2 = new Hero("Black Widow", "Natasha Romanoff", 120)
 console.log(objeto2)
 console.log( objeto2.revelarSecreto() )
+
+
+// subclase
+class SuperHero extends Hero {
+
+  // propiedades
+  constructor(name, identity, hp, superpower) {
+    super( name, identity, hp )
+    this.superpower = superpower // esto solo lo tienen los SuperHeroes
+
+  }
+
+  // metodos => todos se heredan de la clase padre automaticamente
+  useSuperpower( target ) {
+    return `${this.name} está usando el poder de ${this.superpower} en ${target}`
+  }
+
+}
+
+let object3 = new SuperHero("Spiderman", "Peter Parker", 60, "lanzar telarañas")
+console.log(object3)
+
+console.log(object3.useSuperpower( objeto1.name ))
+console.log(object3.volverseVillano())
